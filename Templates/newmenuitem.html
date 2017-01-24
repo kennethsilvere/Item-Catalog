@@ -1,0 +1,36 @@
+<html>
+<head>
+		<link rel=stylesheet type="text/css" href="{{url_for('static', filename='kenstyles.css')}}">
+		<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+</head>
+	<body>
+		<div class="container">
+	
+		<h1>New Menu Item</h1>
+		
+		<form action="{{url_for('newMenuItem', restaurant_id = restaurant_id)}}" method="POST">
+		
+	
+		<label>Name:</label><br/>
+		<input type="text" name="name"><br/><br/>
+			
+		<label>Description:</label><br>
+		<input type="text" name="description"><br/><br/>
+			
+		<label>Price:</label><br/>
+		<input type="text" name="price"><br/><br/>
+			
+		<label>Course:</label><br/>
+		<input type="radio" name="course" value="Appetizer">Appetizer<br/>
+		<input type="radio" name="course" value="Entree">Entree<br/>
+		<input type="radio" name="course" value="Dessert">Dessert<br/>
+		<input type="radio" name="course" value="Beverage">Beverage<br/><br/><br/>
+			
+
+			
+		<input type="submit" value="Create">
+			
+		</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel=stylesheet type="text/css" href="{{url_for('static', filename='kenstyles.css')}}">
+		<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1>Edit Menu Item</h1>
+<form action="{{url_for('editMenuItem', restaurant_id=restaurant_id, MenuID=item.id)}}" method='POST'>
+
+		<label>Name:</label><br/>
+		<input type="text" name="name" placeholder="{{item.name}}"><br/><br/>
+			
+		<label>Description:</label><br>
+		<input type="text" name="description" placeholder="{{item.description}}"><br/><br/>
+			
+		<label>Price:</label><br/>
+		<input type="text" name="price" placeholder="{{item.price}}"><br/><br/>
+			
+		<label>Course:</label><br/>
+		<input type="radio" name="course" value="Appetizer">Appetizer<br/>
+		<input type="radio" name="course" value="Entree">Entree<br/>
+		<input type="radio" name="course" value="Dessert">Dessert<br/>
+		<input type="radio" name="course" value="Beverage">Beverage<br/><br/><br/>
+<input type='submit' value='Edit'>
+</form>
+<a href="{{url_for('restaurantMenu', restaurant_id=item.restaurant_id)}}">Cancel</a>
+	</div>
+</body>
+</html>
