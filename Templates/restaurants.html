@@ -1,12 +1,8 @@
-<html>
-	
-	<head>
-		<link rel=stylesheet type="text/css" href="{{url_for('static', filename='kenstyles.css')}}">
-		<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-	</head>
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
 
-<body>
-<div class="container">
+
 <h1>Restaurants</h1>
 	
 	{% with messages = get_flashed_messages() %}
@@ -15,7 +11,7 @@
 	
 		<ul>			
 			{% for message in messages %}
-				<li><strong> {{message}} </strong></li>
+				<li class="flash"><strong> {{message}} </strong></li>
 			{% endfor %}	
 	
 		</ul>
@@ -51,7 +47,7 @@
 
 
 {% endfor %}
-	</div>
-</body>
 
-</html>
+
+
+{% endblock %}

@@ -1,10 +1,9 @@
+{% extends "main.html" %}
 {% block content %}
+{% include "header.html" %}
 	
 	<div class="row top-menu">
 		<div class="col-md-10"></div>
-		<div class="col-md-2 text-right">
-			<a href="{{url_for('showLogin')}}">Click Here to Log in </a>
-		</div>
 	</div>
 
 
@@ -14,10 +13,6 @@
 	<div class="row banner menu">
 		<div class="col-md-11 col-md-offset-1 padding-none">
 			<h1>{{ restaurant.name }}
-			<figure class="creator">
-				<img src="{{ creator.picture}}">
-				<figcaption>{{ creator.name }}</figcaption>
-			</figure>
 			</h1>
 
 		</div>
@@ -35,7 +30,7 @@
 				{% if messages %}
 					<ul>
 						{% for message in messages %}
-							 <li> <strong> {{ message }} </strong> </li>
+							 <li class="flash"> <strong> {{ message }} </strong> </li>
 						{% endfor %}
 					</ul>
 				{% endif %}
@@ -52,7 +47,7 @@
 							<div class="menu-item">
 								<h3>{{i.name}}</h3>
 								<p>{{i.description}}</p>
-								<p class="menu-price">{{i.price}}</p>
+								<p class="menu-price">${{i.price}}</p>
 								
 							</div>
 						{% endif %}
@@ -65,7 +60,7 @@
 						<div class="menu-item">
 							<h3>{{i.name}}</h3>
 							<p>{{i.description}}</p>
-							<p class="menu-price">{{i.price}}</p>
+							<p class="menu-price">${{i.price}}</p>
 							
 						</div>
 						{% endif %}
@@ -78,7 +73,7 @@
 						<div class="menu-item">
 							<h3>{{i.name}}</h3>
 							<p>{{i.description}}</p>
-							<p class="menu-price">{{i.price}}</p>
+							<p class="menu-price">${{i.price}}</p>
 							
 						</div>
 						{% endif %}
@@ -89,7 +84,7 @@
 						<div class="menu-item">
 							<h3>{{i.name}}</h3>
 							<p>{{i.description}}</p>
-							<p class="menu-price">{{i.price}}</p>
+							<p class="menu-price">${{i.price}}</p>
 							
 						</div>
 						{% endif %}

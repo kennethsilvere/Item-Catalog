@@ -1,25 +1,33 @@
-<head>
-
-  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styling.css') }}">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
   </script>
 
-<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+		<script src="//apis.google.com/js/platform.js?onload=start"> </script>
 
-<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+	</head>
+	<body>
+		<div class="container">
 
-
-</head>
-
-
-<body>  
-
-
-<!-- GOOGLE PLUS SIGN IN-->
-
-          
-          <div id="signInButton">
-          <span class="g-signin"
+			
+	<!-- GOOGLE PLUS SIGN IN-->
+			<div class="row">
+			
+				<h1> Welcome to the Menu</h1>
+				<h3>Please Login to access and modify the menu.</h3>
+			</div>
+			
+			
+			
+          <div class="row">
+			  <div class="col-md-6" class="google">
+				
+          <div id="signInButton" class="google">
+          <span class="g-signin google"
             data-scope="openid email"
             data-clientid="422385442461-npfn3a5a4n1tg7u9gvdl8soob6pcbln6.apps.googleusercontent.com"
             data-redirecturi="postmessage"
@@ -29,14 +37,15 @@
             data-approvalprompt="force">
           </span>
         </div>
+			
 
-<div id="result"></div>
+<div id="result" class="google"></div>
 
 <script>
 function signInCallback(authResult) {
   if (authResult['code']) {
     // Hide the sign-in button now that the user is authorized
-    $('#signinButton').attr('style', 'display: none');
+    $('#signInButton').attr('style', 'display: none');
     // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main restaurants page
     $.ajax({
       type: 'POST',
@@ -62,10 +71,12 @@ function signInCallback(authResult) {
   }); } }
 </script>
 
-
+			  </div>
 
 <!--END GOOGLE PLUS SIGN IN -->
 
+			  
+			  <div class="col-md-6">
 <!--FACEBOOK SIGN IN -->
 <script>
   window.fbAsyncInit = function() {
@@ -122,14 +133,16 @@ function signInCallback(authResult) {
          
 
           <fb:login-button scope="public_profile,email" onlogin="sendTokenToServer();">
-<a href='javascript:sendTokenToServer()'>Login with Facebook</a>
+<a id='fb' href='javascript:sendTokenToServer()'>Login with Facebook</a>
 
 </fb:login-button>
 
 
         </button>
-<!--END FACEBOOK SIGN IN -->
+			  </div>
+			</div>
+		
 
-  </body>
-
-  </html>
+		</div>
+	</body>
+</html>
