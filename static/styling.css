@@ -1,0 +1,59 @@
+
+body {
+	background-color: black;
+	padding: 60px;
+	color: azure;
+	font-family: 'Architects Daughter', cursive;
+}
+
+input{
+	color: black;
+}
+
+.container{
+	border-style: dotted;
+	border-color: azure;
+	border-width: thick;
+}
+
+h1{
+	font-size: 3em;
+	color: peachpuff;
+	font-weight: lighter;
+	text-align: center;
+}
+
+
+.title{
+
+	text-decoration: none;
+	color: peachpuff;
+}
+
+
+
+a{
+	text-decoration: none;
+	color: azure;
+	
+}
+
+
+
+
+.google{
+	align-self: right;
+	float:right;
+	text-align: right;
+}
+
+#login-img{
+	align-content: center;
+	align-items: center;
+	align-self: center;
+	text-align: center;
+}
+
+.flash{
+	color: red;
+}
