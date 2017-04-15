@@ -42,7 +42,7 @@ Breif info about implementation of this project:
 -> Install Vagrant and VirtualBox
 
 
-->Clone the fullstack-nanodegree-vm
+->Clone the fullstack-nanodegree-vm ( https://github.com/udacity/fullstack-nanodegree-vm )
 
 
 ->Launch the Vagrant VM (vagrant up)
