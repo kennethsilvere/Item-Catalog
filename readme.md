@@ -33,3 +33,24 @@ Go to ,
 
 -> http://localhost:5000/restaurant/<int:restaurant_id>/menu/<int:menu_id>/JSON/ to get the menu item of a specific menu in a specific restaurant in a serialized JSON format. Replace <int:restaurant_id> and <int:menu_id> in the url with the id of the restaurant and the id of the menu that you need.
 
+
+--------------------------------------------------------------
+
+Breif info about implementation of this project:
+
+
+-> Install Vagrant and VirtualBox
+
+
+->Clone the fullstack-nanodegree-vm
+
+
+->Launch the Vagrant VM (vagrant up)
+
+->Write your Flask application locally in the vagrant/catalog directory (which will automatically be synced to /vagrant/catalog within the VM).
+
+
+->Run your application within the VM (python /vagrant/catalog/application.py)
+
+
+->Access and test your application by visiting http://localhost:8000 locally
